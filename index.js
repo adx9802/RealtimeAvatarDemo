@@ -90,7 +90,7 @@ async function startAndDisplaySession() {
 
   // Start session
   await startSession(sessionInfo.session_id, localDescription);
-  updateStatus(statusElement, "Session started successfully");
+  updateStatus(statusElement, "Session started successfully - id:" + sessionInfo.session_id);
 }
 
 const taskInput = document.querySelector("#taskInput");
@@ -304,3 +304,4 @@ async function stopSession(session_id) {
     return data.data;
   }
 }
+
